@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <!-- <meta http-equiv="Page-Enter" content="progid:DXImageTransform.Microsoft.Fade(duration=1)">
+    <meta http-equiv="Page-Exit" content="progid:DXImageTransform.Microsoft.Fade(duration=1)">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1"> -->
+    <meta http-equiv="Content-Type" content="text/html; charset = UTF-8" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="Stylesheet" href="style.css" type="text/css" />
+    <link rel="Stylesheet" href="style1.css" type="text/css" />
+    <title>💖 Love 💖</title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="counterup.js"></script>
+    <script type="text/javascript" src="timroi.js"></script>
+  </head>
+
+  <div class="container">
+    <body
+<audio id="myaudio" src="./Em-La-Nhat.mp3" loop style="margin:0; padding:0; background: url('background.jpg') no-repeat center center fixed; background-size: cover;"></audio>
+<script>
+  const audio = document.getElementById("myaudio");
+  let hasPlayed = false;
+
+  function playMusic() {
+    if (!hasPlayed) {
+      audio.play().catch(() => {});
+      hasPlayed = true;
+    }
+  }
+
+  document.addEventListener("touchstart", playMusic, { once: true });
+  document.addEventListener("click", playMusic, { once: true });
+
+  window.addEventListener("pageshow", () => {
+    hasPlayed = false;
+  });
+</script>
+
+      onload="javascript:teclear();"
+      style="background-color: rgb(255 163 202)"
+    >
+      <div id="TextCounter">
+        <strong>I</strong>
+        <img src="heartr.png" />
+        <strong>U</strong>
+        
+      </div>
+      <div id="BgContent" >
+        <div id="copyright">Gửi Em</div>
+        <div id="TextContent"></div>
+        <a href="#">
+          <button class="btn">Người anh yêu</button>
+        </a>
+        
+      </div>
+      <div id="canvas"></div>
+      <script type="text/javascript" src="protoclass.js"></script>
+      <script type="text/javascript" src="box2d.js"></script>
+      <script type="text/javascript" src="Main.js"></script>
+      <script language="javascript" type="text/javascript">
+        mensaje =
+          '<font size="6" face="Courier New" color="#fff">Yêu Em....<br></font>' +
+          " <br>" +
+          '<font color="#fff" size="4">Em yêu, nếu em yêu anh thì hãy đến bên nắm chặt tay a nhé!</font><br>' +
+          "<br>    " +
+          '<font size="4" color="#fff">Ta có thể đi dạo cùng nhau vào đầu mùa xuân.</font><br>' +
+          "<br>" +
+          '<font size="4" color="#fff"Có thể cùng nhau tận hưởng những bãi biển đẹp khi hè tới.</font>  <br> <br>           ' +
+          '  <font size="4" color="#fff">Cùng nhau ngắm trăng vào mùa thu và ngắm tuyết rơi trong những mùa đông giá lạnh.</font>' +
+          "                    <br>" +
+          '<p align="left"> <font face="Courier New" style="font-family:bold;" color="#fff" size="6">Không hào nhoáng mệt mỏi, nhưng đơn giản và vui vẻ. Và điều quan trọng là luôn được ở bên nhau. Mãi yêu <3</font></p>';
+        line = 0;
+        cursor = "_";
+        function teclear() {
+          if (line == mensaje.length) cursor = "";
+          document.getElementById("TextContent").innerHTML =
+            mensaje.substring(0, line) + cursor;
+          var objDiv = document.getElementById("TextContent");
+          objDiv.scrollTop = objDiv.scrollHeight;
+          if (line++ < mensaje.length) setTimeout("teclear()", 60);
+        }
+      </script>
+    </body>
+  </div>
+  <script>
+    window.addEventListener("resize", () => {
+      const background = document.querySelector(".background");
+      background.style.height = `${window.innerHeight}px`;
+      background.style.width = `${window.innerWidth}px`;
+    });
+  </script>
+</html>
