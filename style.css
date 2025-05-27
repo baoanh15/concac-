@@ -1,15 +1,38 @@
 ﻿body
 {
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
-    background-image: url('background.jpg');
-    background-position: top center;
+    padding: 0px;  
+    margin: 0px;  
+    overflow: hidden;  
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;  
+}
+.btn {  
+    position: relative;  
+    top: -40px; /* Nếu bạn muốn giữ vị trí này */  
+    left: 37rem; /* Nếu bạn muốn giữ vị trí này */  
+    
+    background-color: #FF69B4; /* Màu nền hồng */  
+    color: white; /* Màu chữ trắng */  
+    border: none; /* Không viền */  
+    border-radius: 5px; /* Bo góc */  
+    padding: 10px 20px; /* Thêm khoảng trắng xung quanh chữ */  
+    font-size: 16px; /* Kích thước chữ */  
+    cursor: pointer; /* Hiển thị con trỏ khi rê chuột */  
+    transition: background-color 0.3s, transform 0.2s; /* Hiệu ứng chuyển đổi */  
+}  
+
+/* Hiệu ứng hover */  
+.btn:hover {  
+    background-color: #FF1493; /* Màu khi rê chuột */  
+    transform: scale(1.05); /* Phóng to một chút */  
 }
 
-
-#TextCounter
-{
+.container{
+    background-color: rgb(255 163 202);
+    background-image: url('khung.png');  
+    background-size:cover; /* Thay đổi để bao phủ toàn bộ */  
+    
+}
+#TextCounter{
     text-align: center;
     color: pink;
     font-size: 18px;
@@ -18,27 +41,28 @@
     width: 100%;
     z-index: 9999999;
     font: 40px 'ChunkFiveRegular';
-    text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.2em #87F;
+    text-shadow: 0 0 0.2em #87F,
+                 0 0 0.2em #87F, 
+                 0 0 0.2em #87F;
 }
 
 
 #copyright
 {
-    
     padding-top:195px;
-    
     color: #fff;
     width: 100%;
     font-size: 20px;
-    padding-left:500px;
+    padding-left:570px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 
 #BgContent
 {
-    height: 621px;
+    height: 600px;
     width: 908px;
+    bottom: 70px;
     position:relative;
     clear:both;
     margin-left: auto;

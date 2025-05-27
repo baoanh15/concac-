@@ -4,10 +4,12 @@ var delta = [ 0, 0 ];
 var stage = [ window.screenX, window.screenY, window.innerWidth, window.innerHeight ];
 getBrowserDimensions();
 
-var themes = [ [ "#000", "#95AB63", "#BDD684", "#E2F0D6", "#F6FFE0" ],
-		[ "#000", "#102C2E", "#695F4C", "#EBBC5E", "#FFFBB8" ],
-		[ "#000", "#E6F2DA", "#C9F24B", "#4D7B85", "#23383D" ],
-		[ "#000", "#B4BD51", "#543B38", "#61594D", "#B8925A" ] ];
+var themes = [ 
+	["#000", "#FFC0CB", "#FF69B4", "#FFB6C1", "#FFDFDF"], // Tông hồng nhẹ  
+    ["#000", "#FF1493", "#FF69B4", "#FFB0C4", "#FFF0F5"], // Tông hồng đậm  
+    ["#000", "#FF7F50", "#FF6347", "#FFBFFF", "#FFDAB9"], // Tông hồng ngọt ngào  
+    ["#000", "#DB7093", "#FF6F91", "#FAD6E0", "#FFF0F0"]  // Tông hồng pastel  
+];
 var theme;
 
 var worldAABB, world, iterations = 1, timeStep = 1 / 20;
@@ -64,7 +66,7 @@ function init() {
 
 function play() {
 
-	setInterval( loop, 1000 / 40 );
+	setInterval( loop, 1000 /60 );
 }
 
 function reset() {
@@ -113,16 +115,17 @@ function onDocumentMouseUp() {
 	return false;
 }
 
+function onDocumentDoubleClick() {
+
+	reset();
+}
+
 function onDocumentMouseMove( event ) {
 
 	mouseX = event.clientX;
 	mouseY = event.clientY;
 }
 
-function onDocumentDoubleClick() {
-
-	reset();
-}
 
 function onDocumentTouchStart( event ) {
 
@@ -150,7 +153,7 @@ function onDocumentTouchStart( event ) {
 
 function onDocumentTouchMove( event ) {
 
-	if ( event.touches.length == 1 ) {
+	if ( event.touches.length == 0.1 ) {
 
 		event.preventDefault();
 
@@ -216,7 +219,7 @@ function createInstructions() {
 
 	text = document.createElement( 'div' );
 	text.onSelectStart = null;
-	text.innerHTML = '<span style="color:' + theme[0] + ';font-size:30px;">Love Forever!</span><br /><span style="font-size:15px;"><strong>You may only be one person to the world but you may be the world to one person.</strong><br />I had give up my life if I could command one smille of your eyes, one touch of your hand.<br />I love You!</span>';
+	text.innerHTML = '<span style=" color:' + theme[0] + ';font-size:30px;">Love Forever!</span><br /><span style="font-size:15px;"><strong>You may only be one person to the world but you may be the world to one person.</strong><br />I had give up my life if I could command one smille of your eyes, one touch of your hand.<br />I love You!</span>';
 	text.style.color = theme[1];
 	text.style.position = 'absolute';
 	text.style.left = '0px';
@@ -383,7 +386,7 @@ function mouseDrag()
 
 		} else {
 
-			createMode = true;
+			createMode = false;
 
 		}
 

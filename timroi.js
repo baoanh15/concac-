@@ -25,14 +25,14 @@
                         top:'-30px',
                         display:'block',
                         opacity:'0.'+e(10,100)}).animate({top:(d-10)+'px'},
-                        e(7500,8000),
+                        e(500,10000),
                 function(){
                         $pdj(this).fadeOut('slow',
                         function(){f(a)})})},e(1,8000))
                     };
                     $pdj('<div></div>').attr('id','rainDiv').css({position:'fixed',width:(c-20)+'px',height:'1px',left:'0px',top:'-5px',display:'block'}).appendTo('body');
                     
-                    for(var i=1;i<=20;i++){
+                    for(var i=1;i<=100;i++){
                         var g=$pdj('<img/>').attr('src',image_urls['rain']).css({position:'absolute',left:e(0,c)+'px',top:'-30px',display:'block',opacity:'0.'+e(10,100),'margin-left':0}).addClass('rainDrop').appendTo('#rainDiv');
                         f(g);
                         g=null
